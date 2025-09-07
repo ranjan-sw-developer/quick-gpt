@@ -5,7 +5,7 @@ const plans = [
   {
     _id: "basic",
     name: "Basic",
-    price: 10,
+    price: 99,
     credits: 100,
     features: [
       "100 text generations",
@@ -17,7 +17,7 @@ const plans = [
   {
     _id: "pro",
     name: "Pro",
-    price: 20,
+    price: 499,
     credits: 500,
     features: [
       "500 text generations",
@@ -30,7 +30,7 @@ const plans = [
   {
     _id: "premium",
     name: "Premium",
-    price: 30,
+    price: 999,
     credits: 1000,
     features: [
       "1000 text generations",
@@ -80,7 +80,7 @@ export const purchasePlan = async (req, res) => {
       line_items: [
         {
           price_data: {
-            currency: "usd",
+            currency: "inr",
             unit_amount: plan.price * 100,
             product_data: {
               name: plan.name,
